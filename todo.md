@@ -1,11 +1,11 @@
 # TODO
 
 - [x] create expo project
-- [ ] create dev.md and note each step
+- [x] create dev.md and note each step
+- [x] create picker sample
+
 - [ ] setup tests
 - [ ] add tests setup to expostart 
-- [ ] create picker sample
-- [ ] add switch sample
-- [ ] add tests for switch 
+
 - [ ] add tests for picker
 - [ ] write blog post

@@ -6,27 +6,22 @@ export default function App() {
   const [selectedValue, setSelectedValue] = useState("java");
   const [modalVisible, setModalVisible] = useState(false);
 
-
   const renderPicker = () => (
-        <Picker
-          placeholder="Select a language"
-          selectedValue={selectedValue}
-          onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
-        >
-          <Picker.Item label="Java" value="java" />
-          <Picker.Item label="JavaScript" value="js" />
-          <Picker.Item label="Python" value="python" />
-          <Picker.Item label="Ruby" value="ruby" />
-        </Picker>
-  )
+    <Picker
+      placeholder="Select a language"
+      selectedValue={selectedValue}
+      onValueChange={(itemValue) => setSelectedValue(itemValue)}
+    >
+      <Picker.Item label="Java" value="java" />
+      <Picker.Item label="JavaScript" value="js" />
+      <Picker.Item label="Python" value="python" />
+      <Picker.Item label="Ruby" value="ruby" />
+    </Picker>
+  );
 
   const renderPickerContainer = () => {
     if (Platform.OS === "android") {
-      return (
-        <View style={{minWidth: '50%'}}>
-          {renderPicker()}
-        </View>
-      );
+      return <View style={styles.androidPickerWrapper}>{renderPicker()}</View>;
     } else {
       return (
         <Modal
@@ -83,4 +78,5 @@ const styles = StyleSheet.create({
     padding: 20,
     width: "80%",
   },
+  androidPickerWrapper: { minWidth: "50%" },
 });

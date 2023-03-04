@@ -5,6 +5,8 @@
 - [x] create picker sample
 
 - [ ] setup tests
+  - [ ] Jest with Expo
+  - [ ] react-native-testing-library
 - [ ] add tests setup to expostart 
 
 - [ ] add tests for picker
